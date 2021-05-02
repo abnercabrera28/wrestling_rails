@@ -1,10 +1,9 @@
-<h1> Sign Up </h1>
 <%= render partial: 'errors/errors', locals: {model: @user} if @user %>
 
-<%= form_with(model: @user, url: signup_path, html: {class: "signup"})  do |f|%>
-    <%= f.label :username %>
-    <%= f.text_field :username %><br>
-    <%= f.label :password %>
-    <%= f.password_field :password %><br>
+<%= form_with(model: @user, url: signup_path, class: "signup")  do |f|%>
+    <h1> Sign Up </h1>
+    <%= f.text_field :username, placeholder: 'Username'%><br>
+    <%= f.password_field :password, placeholder: 'Password' %><br>
+    <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %><br>
     <%= f.submit "Sign Up" %>
 <% end %>
