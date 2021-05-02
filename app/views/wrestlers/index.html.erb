@@ -3,9 +3,7 @@
 <ul class="list">
 <% @wrestlers.each do |wrestler| %>
     <li>
-        <a class="wrestle" href="/wrestlers/<%= wrestler.id %>">
-        <%= wrestler.name %>
-        </a>
+        <%= link_to wrestler.name, wrestler_path(wrestler), class: 'wrestle' %>
     </li>
     <% end %>
 </ul>
