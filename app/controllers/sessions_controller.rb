@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
-            redirect_to images_path
+            redirect_to wrestlers_path
         else
             flash[:message] = "Incorrect Username or Password"
             render :new
@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
         
         if @user.valid?
             session[:user_id] = @user.id
-            redirect_to images_path
+            redirect_to wrestlers_path
         else
             flash[:message] = "Incorrect credentials"
             redirect_to login_path
