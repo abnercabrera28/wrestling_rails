@@ -4,4 +4,12 @@ class WrestlersController < ApplicationController
         @wrestlers = Wrestler.all
     end
 
+    def new
+        @wrestler = Wrestler.new
+    end
+
+    def create
+        
+    end 
+
 end
