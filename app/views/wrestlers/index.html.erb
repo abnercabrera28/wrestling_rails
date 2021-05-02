@@ -1,0 +1,11 @@
+<h1 class="fav">Your Favorite Wrestlers</h1>
+
+<ul class="list">
+<% @wrestlers.each do |wrestler| %>
+    <li>
+        <a class="wrestle" href="/wrestlers/<%= wrestler.id %>">
+        <%= wrestler.name %>
+        </a>
+    </li>
+    <% end %>
+</ul>
