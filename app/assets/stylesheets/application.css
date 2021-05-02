@@ -13,3 +13,138 @@
  *= require_tree .
  *= require_self
  */
+
+ .error {
+    background-color: rgb(230, 195, 195);
+}
+
+.home {
+    text-align: center;
+    font-size: 170px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.nav-bar {
+    background-color: honeydew;
+    opacity: 30%;
+}
+.sub {
+    text-align: center;
+    color: honeydew;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    text-align: center;
+    color: honeydew;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bg {
+    background-image: url(app/assets/images/joe-hernandez-OebdsI0Q4F0-unsplash.jpg);
+    background-color: grey;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login, .signup {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: honeydew;
+    opacity: 85%;
+    text-align: center;
+}
+
+.login h1{
+    color: rgba(107, 113, 121, 0.63);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.signup h1{
+    color: rgba(107, 113, 121, 0.63);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.login input[type = "text"], .login input[type = "password"], .signup input[type = "text"], .signup input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgba(107, 113, 121, 0.63);
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    border-radius: 24px;
+}   
+
+.login input[type = "submit"], .signup input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(84, 84, 170);
+    padding: 14px 40px;
+    outline: none;
+    border-radius: 24px;
+}
+
+.wrestle {
+    color: honeydew;
+    font-size: 30px;
+}
+
+.list {
+    text-align: center;
+    list-style-type: none;
+}
+
+a:link {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+.fav, .w-name {
+    text-align: center;
+    font-size: 90px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.info {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: honeydew;
+    font-size: x-large;
+    text-align: center;
+    list-style-type: none;
+}
+
+.li {
+    list-style-type: none;
+}
+
+.edit {
+    text-decoration: none;
+    color: honeydew;
+}
+
+.create, .edits {
+    padding-left: 20px;
+}
+
+.new, .update {
+    color: honeydew;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
