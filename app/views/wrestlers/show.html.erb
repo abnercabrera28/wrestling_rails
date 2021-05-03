@@ -1,1 +1,14 @@
 <%= @wrestler.name %>
+
+<br>
+
+<button type="button" class="btn btn-outline-light">
+    <a class="edit" href="/wrestlers/<%= @wrestler.id %>/edit">
+        Edit
+    </a>
+</button> <br><br>
+
+<form action="/wrestlers/<%= @wrestler.id %>" method="POST">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" class="btn btn-outline-danger" value="Delete Wrestler">
+</form>
