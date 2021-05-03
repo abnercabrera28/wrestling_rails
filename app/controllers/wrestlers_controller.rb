@@ -9,7 +9,20 @@ class WrestlersController < ApplicationController
     end
 
     def create
-        
+        @wrestler = Wrestler.new
+        if @wrestler.save
+            redirect_to wrestler_path(@wrestler)
+        else
+            flash[:error] = "#{@wrestler.errors.full_messages.join(" | ")}"
+            render :new
+        end
+
     end 
+
+    private
+
+    def wrestler_params
+        params.require(:wrestler).permit(:name, :hails_from, :birthdate)
+    end
 
 end
