@@ -11,5 +11,6 @@
         <%= link_to wrestler.name, wrestler_path(wrestler), class: 'wrestle' %>
     </li>
     <% end %>
-    <%= link_to "Create New Wrestler For Team", new_team_wrestler_path(@team) if @team %>
+    <%= link_to "Create New Wrestler For Team", new_team_wrestler_path(@team) if @team %><br>
+    <%= link_to "#{@team.name} Wrestlers", team_wrestlers_path(@team) if @team %>
 </ul>
