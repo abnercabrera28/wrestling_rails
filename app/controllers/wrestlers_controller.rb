@@ -46,7 +46,7 @@ class WrestlersController < ApplicationController
     private
 
     def wrestler_params
-        params.require(:wrestler).permit(:name, :hails_from, :birthdate, :belt, :special_move, :team_id)
+        params.require(:wrestler).permit(:name, :hails_from, :birthdate, :belt, :special_move, team_attributes: [:name])
     end
 
 end
