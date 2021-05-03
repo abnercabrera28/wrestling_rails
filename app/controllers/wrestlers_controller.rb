@@ -11,7 +11,6 @@ class WrestlersController < ApplicationController
 
     def create
         @wrestler = current_user.wrestlers.build(wrestler_params)
-        # @wrestler.team_id = Team.first.id
         if @wrestler.save
             redirect_to wrestler_path(@wrestler)
         else
