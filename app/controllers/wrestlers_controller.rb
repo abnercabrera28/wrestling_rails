@@ -9,7 +9,8 @@ class WrestlersController < ApplicationController
     end
 
     def create
-        @wrestler = Wrestler.new(wrestler_params)
+        @wrestler = current_user.wrestlers.build(wrestler_params)
+        @wrestler.team_id = Team.first.id
         if @wrestler.save
             redirect_to wrestler_path(@wrestler)
         else
@@ -17,12 +18,14 @@ class WrestlersController < ApplicationController
         end
     end 
 
-    
+    def show
+        @wrestler = Wrestler.find_by_id(params[:id])
+    end
 
     private
 
     def wrestler_params
-        params.require(:wrestler).permit(:name, :hails_from, :birthdate)
+        params.require(:wrestler).permit(:name, :hails_from, :birthdate, :belt, :special_move, :team_id)
     end
 
 end
