@@ -1,0 +1,8 @@
+<h1 class="w-name"><%= @team.name %></h1>
+<div class="info">
+<ul class="li">
+<% @team.wrestlers.each do |wrestler| %>
+    <li><%= link_to wrestler.name, wrestler_path(wrestler), class: 'wrestle' %></li>
+<% end %>
+</ul>
+</div>
