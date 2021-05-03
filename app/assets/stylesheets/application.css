@@ -42,7 +42,7 @@ h1 {
 }
 
 .bg {
-    background-image: url(app/assets/images/joe-hernandez-OebdsI0Q4F0-unsplash.jpg);
+    background-image: url("joe-hernandez-OebdsI0Q4F0-unsplash.jpg");
     background-color: grey;
     height: 100%;
     background-position: center;
