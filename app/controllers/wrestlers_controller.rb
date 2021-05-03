@@ -6,6 +6,7 @@ class WrestlersController < ApplicationController
 
     def new
         @wrestler = Wrestler.new
+        @wrestler.build_team
     end
 
     def create
