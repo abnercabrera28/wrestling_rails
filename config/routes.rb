@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'session#create'
 
+  get '/most_recent', to: 'wrestlers#most_recent', as: 'recent'
+
   get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
 
   root('static#home')
