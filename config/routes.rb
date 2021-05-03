@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   resources :users
-  resources :teams
+  resources :teams do 
+    resources :wrestlers, only: [:show, :index, :new, :create]
+  end
   resources :wrestlers
+
+  get '/wrestlers', to: 'wrestlers#new'
+  post '/wrestlers', to: 'wrestlers#show'
 
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
