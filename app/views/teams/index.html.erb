@@ -1,0 +1,9 @@
+<h1 class="fav">Team Organizations</h1>
+
+<ul class="list">
+<% @teams.each do |team| %>
+    <li>
+        <%= link_to team.name, team_path(team), class: 'wrestle' %>
+    </li>
+    <% end %>
+</ul>
