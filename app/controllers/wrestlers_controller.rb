@@ -9,7 +9,7 @@ class WrestlersController < ApplicationController
     end
 
     def create
-        @wrestler = Wrestler.new
+        @wrestler = Wrestler.new(wrestler_params)
         if @wrestler.save
             redirect_to wrestler_path(@wrestler)
         else
