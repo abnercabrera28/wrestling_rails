@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resources :teams do 
-    resources :wrestlers, only: [:show, :index, :new, :create]
+    resources :wrestlers
   end
   resources :wrestlers
 
