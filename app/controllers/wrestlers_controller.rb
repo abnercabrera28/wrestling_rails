@@ -37,6 +37,12 @@ class WrestlersController < ApplicationController
         end
     end
 
+    def destroy
+        @wrestler = Wrestler.find_by(id: params[:id])
+        @wrestler.destroy
+        redirect_to wrestlers_path
+    end
+
     private
 
     def wrestler_params
