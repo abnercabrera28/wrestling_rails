@@ -1,0 +1,11 @@
+<%= render partial: 'errors/errors', locals: {model: @wrestler} if @wrestler %>
+
+<%= form_with(model: @wrestler)  do |f|%>
+    <h2> Create A New Wrestler </h2>
+    <%= f.text_field :name, placeholder: 'Name'%><br>
+    <%= f.text_field :hails_from, placeholder: 'From'%><br>
+    <%= f.text_field :birthdate, placeholder: 'Birthdate'%><br>
+    <%= f.text_area :belt, placeholder: 'Belt(s)'%><br>
+    <%= f.text_area :special_move, placeholder: 'Special Move(s)'%><br>
+    <%= f.submit "Create" %>
+<% end %>
