@@ -1,5 +1,13 @@
-<%= @wrestler.name %>
+<h1 class="w-name"><%= @wrestler.name %></h1>
+<div class="info">
+<ul class="li">
+    <li>Born <%= @wrestler.birthdate %></li>
+    <li>Hails from <%= @wrestler.hails_from %></li>
+    <li>Belt(s) Held: <%= @wrestler.belt %></li>
+    <li>Special Move(s): <%= @wrestler.special_move %></li>
+</ul>
 
+<h2>Team Organization: <%= @wrestler.team.name %></h2>
 <br>
 
 <button type="button" class="btn btn-outline-light">
@@ -8,7 +16,6 @@
     </a>
 </button> <br><br>
 
-<form action="/wrestlers/<%= @wrestler.id %>" method="POST">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" class="btn btn-outline-danger" value="Delete Wrestler">
-</form>
+<%= link_to "Delete Wrestler", wrestler_path(@wrestler), method: "delete", class: 'btn btn-outline-danger' %>
+
+</div>
