@@ -20,6 +20,10 @@ class WrestlersController < ApplicationController
 
     def show
         @wrestler = Wrestler.find_by_id(params[:id])
+        @team = Team.find_by_id(params[:team_id])
+        if @wrestler.team != @team
+            redirect_to teams_path 
+        end
     end
 
     def edit
