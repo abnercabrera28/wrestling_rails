@@ -23,11 +23,11 @@ class WrestlersController < ApplicationController
     end
 
     def edit
-        @wrestler = Wrestler.find_by(id: params[:id] )
+        @wrestler = Wrestler.find_by_id(params[:id])
     end
 
     def update
-        @wrestler = Wrestler.find_by(id: params[:id])
+        @wrestler = Wrestler.find_by_id(params[:id])
         @wrestler.update(wrestler_params)
 
         if @wrestler.valid?
@@ -38,7 +38,7 @@ class WrestlersController < ApplicationController
     end
 
     def destroy
-        @wrestler = Wrestler.find_by(id: params[:id])
+        @wrestler = Wrestler.find_by_id(params[:id])
         @wrestler.destroy
         redirect_to wrestlers_path
     end
