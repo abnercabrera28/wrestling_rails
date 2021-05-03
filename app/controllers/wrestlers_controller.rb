@@ -48,6 +48,10 @@ class WrestlersController < ApplicationController
         redirect_to wrestlers_path
     end
 
+    def most_recent
+        @wrestlers = Wrestler.most_recent
+    end
+
     private
 
     def wrestler_params
