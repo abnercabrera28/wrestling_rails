@@ -1,4 +1,9 @@
+<% if @team %>
+<h1 class="fav"> <%= @team.name %> Wrestlers</h1>
+<% else %>
 <h1 class="fav">Your Favorite Wrestlers</h1>
+<% end %>
+
 
 <ul class="list">
 <% @wrestlers.each do |wrestler| %>
@@ -6,4 +11,5 @@
         <%= link_to wrestler.name, wrestler_path(wrestler), class: 'wrestle' %>
     </li>
     <% end %>
+    <%= link_to "Create New Wrestler For Team", new_team_wrestler_path(@team) if @team %>
 </ul>
