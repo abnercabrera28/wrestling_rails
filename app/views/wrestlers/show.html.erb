@@ -7,7 +7,7 @@
     <li>Special Move(s): <%= @wrestler.special_move %></li>
 </ul>
 
-<h2>Team Organization: <%= @wrestler.team.name %></h2>
+<h2>Team Organization: <%= @wrestler.team.name if @wrestler.team %></h2>
 <br>
 
 <button type="button" class="btn btn-outline-light">
