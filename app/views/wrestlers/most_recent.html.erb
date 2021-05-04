@@ -1,0 +1,10 @@
+<h1 class="w-name">Recently Added Wrestlers</h1>
+<div class="info">
+<ul class="list">
+<% @wrestlers.each do |wrestler| %>
+<li><%= link_to wrestler.name, wrestler_path(wrestler), class: 'wrestle' %></li>
+<% end %>
+</ul>
+
+
+</div>
