@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to wrestlers_path
         else
-            flash[:message] = "Incorrect Username or Password"
+            flash[:error] = "Incorrect Username or Password"
             render :new
         end
     end

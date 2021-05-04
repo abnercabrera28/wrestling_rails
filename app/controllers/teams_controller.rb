@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
 
     def index
-        @teams = Team.all
+        @teams = current_user.teams
     end
 
     def new

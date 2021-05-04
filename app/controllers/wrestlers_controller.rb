@@ -5,7 +5,7 @@ class WrestlersController < ApplicationController
             @team = Team.find(params[:team_id])
             @wrestlers = @team.wrestlers
         else
-            @wrestlers = Wrestler.all
+            @wrestlers = current_user.wrestlers
         end
     end
 
@@ -29,6 +29,7 @@ class WrestlersController < ApplicationController
 
     def edit
         @wrestler = Wrestler.find_by_id(params[:id])
+        @wrestler.build_team
     end
 
     def update
