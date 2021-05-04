@@ -44,7 +44,10 @@
             <a class="nav-link active" href="/teams/new">Create New Team</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="/logout" tabindex="-1">Log Out</a>
+            <a class="nav-link active" href="/most_recent">Recently Added</a>
+        </li>
+        <li>
+            <%= link_to 'Log Out', logout_path, class: 'nav-link active', method: 'delete' %>
         </li>
         <% end %>
         </ul>
