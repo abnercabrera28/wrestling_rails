@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
 
   get '/login', to: 'sessions#new'
-  post '/login', to: 'session#create'
+  post '/login', to: 'sessions#create'
+
+  delete '/logout', to: "sessions#logout"
 
   get '/most_recent', to: 'wrestlers#most_recent', as: 'recent'
 
