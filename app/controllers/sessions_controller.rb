@@ -7,6 +7,10 @@ class SessionsController < ApplicationController
     def create
         @user = User.find_by_username(params[:user][:username])
 
+        if params["user"]["username"].empty? || params["user"]["password"].empty?
+            flash[:error] = "Cannot leave fields blank"
+        end
+
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
             redirect_to wrestlers_path
