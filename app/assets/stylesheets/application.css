@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .error {
+ #error_explanation {
     background-color: rgb(230, 195, 195);
 }
 
