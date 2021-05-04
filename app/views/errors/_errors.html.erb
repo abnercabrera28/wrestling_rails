@@ -3,10 +3,10 @@
 <div id="error_explanation">
   <h2><%= pluralize(model.errors.count, "error") %> prohibited the execution:</h2>
 
-  <ul>
+  
     <% model.errors.each do |error| %>
-      <li><%= error.full_message %></li>
+      <%= error.full_message %>  | 
     <% end %>
-  </ul>
+  
 </div>
 <% end %>
