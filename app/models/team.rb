@@ -5,4 +5,5 @@ class Team < ApplicationRecord
     accepts_nested_attributes_for :wrestlers
 
     validates :name, presence: true, uniqueness: true
+    validates :description, presence: true
 end
