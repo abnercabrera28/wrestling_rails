@@ -9,7 +9,7 @@ class TeamsController < ApplicationController
     end
 
     def create
-        @team = Team.new(team_params)
+        @team = current_user.teams.build(team_params)
         if @team.save
             redirect_to team_path(@team)
         else
