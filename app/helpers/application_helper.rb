@@ -15,4 +15,9 @@ module ApplicationHelper
     def redirect_if_logged_in
         redirect_to wrestlers_path if logged_in?
     end
+
+    def authorized
+        @wrestler = Wrestler.find_by_id(params[:id])
+        @wrestler.user_id == session[:user_id]
+    end
 end
