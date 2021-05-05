@@ -2,7 +2,7 @@
 <div class="info">
 <ul class="list">
 <% @wrestlers.each do |wrestler| %>
-<li><%= link_to wrestler.name, wrestler_path(wrestler), class: 'wrestle' %></li>
+<li><%= link_to wrestler.name, wrestler_path(wrestler), class: 'wrestle' %> - Added by <%= wrestler.user.username %> </li>
 <% end %>
 </ul>
 
