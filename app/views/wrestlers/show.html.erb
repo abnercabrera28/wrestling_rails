@@ -10,6 +10,8 @@
 <h2>Team Organization: <%= @wrestler.team.name if @wrestler.team %></h2>
 <br>
 
+<% if authorized %>
+
 <button type="button" class="btn btn-outline-light">
     <a class="edit" href="/wrestlers/<%= @wrestler.id %>/edit">
         Edit
@@ -17,5 +19,7 @@
 </button> <br><br>
 
 <%= link_to "Delete Wrestler", wrestler_path(@wrestler), method: "delete", class: 'btn btn-outline-danger' %>
+
+<% end %>
 
 </div>
