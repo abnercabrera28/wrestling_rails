@@ -1,24 +1,17 @@
-# README
+# Wrestlr
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Wrestlr is a Rails application that allows users to save information about their favorite wrestlers and teams! 
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+For a walkthrough of the user experience, click this [here](https://youtu.be/3CYMEfLDU_g).
 
-* System dependencies
+## Development
 
-* Configuration
+After checking out the repo, run bundle to install dependencies. Then run the rails server (rails s) to be taken to the application.
 
-* Database creation
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/abnercabrera28/wrestling_rails.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://github.com/abnercabrera28/wrestling_rails/blob/master/LICENSE)
