@@ -30,7 +30,7 @@ class TeamsController < ApplicationController
         @team.update(team_params)
 
         if @team.valid?
-            redirect_to wrestler_path(@team)
+            redirect_to team_path(@team)
         else
             render :edit
         end
@@ -46,6 +46,6 @@ class TeamsController < ApplicationController
     private
 
     def team_params
-        params.require(:team).permit(:name)
+        params.require(:team).permit(:name, :description)
     end
 end
