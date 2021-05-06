@@ -16,9 +16,11 @@ class WrestlersController < ApplicationController
 
     def create
         @wrestler = current_user.wrestlers.build(wrestler_params)
+        
         if @wrestler.save
             redirect_to wrestler_path(@wrestler)
         else
+            @wrestler.build_team
             render :new
         end
     end 
@@ -56,7 +58,7 @@ class WrestlersController < ApplicationController
     private
 
     def wrestler_params
-        params.require(:wrestler).permit(:name, :hails_from, :birthdate, :belt, :special_move, :team_id, team_attributes: [:name])
+        params.require(:wrestler).permit(:name, :hails_from, :birthdate, :belt, :special_move, :team_id, team_attributes: [:name, :description])
     end
 
 end
