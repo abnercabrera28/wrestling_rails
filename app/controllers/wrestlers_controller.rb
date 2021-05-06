@@ -41,6 +41,7 @@ class WrestlersController < ApplicationController
         if @wrestler.valid?
             redirect_to wrestler_path(@wrestler)
         else
+            @wrestler.build_team
             render :edit
         end
     end
