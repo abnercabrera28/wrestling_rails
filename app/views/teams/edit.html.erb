@@ -1,14 +1,3 @@
 <%= render partial: 'errors/errors', locals: {model: @team} if @team %>
 
 <%= render partial: 'form', locals: { form_title: "Change Team Name", model: @team, button_name: "Update"  } %>
-
-<!--
-<div class="create">
-<%= form_with(model: @team) do |f|%>
-    <h2 class="new"> Change Team Name </h2>
-    <%= f.text_field :name, placeholder: 'Name'%><br>
-    <%= f.text_area :description, placeholder: 'Describe Your Team'%><br>
-    <%= f.submit "Update" %>
-<% end %>
-</div>
--->
