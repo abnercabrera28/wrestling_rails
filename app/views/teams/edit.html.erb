@@ -1,5 +1,8 @@
 <%= render partial: 'errors/errors', locals: {model: @team} if @team %>
 
+<%= render partial: 'form', locals: { form_title: "Change Team Name", model: @team, button_name: "Update"  } %>
+
+<!--
 <div class="create">
 <%= form_with(model: @team) do |f|%>
     <h2 class="new"> Change Team Name </h2>
@@ -8,3 +11,4 @@
     <%= f.submit "Update" %>
 <% end %>
 </div>
+-->
