@@ -1,5 +1,8 @@
 <%= render partial: 'errors/errors', locals: {model: @wrestler} if @wrestler %>
 
+<%= render partial: 'form', locals: { form_title: "Edit Your Wrestler", model: @wrestler, button_name: "Update"  } %>
+
+<!--
 <div class="create">
 <%= form_with(model: @wrestler)  do |f|%>
     <h2 class="new"> Edit Your Wrestler </h2>
@@ -18,4 +21,5 @@
     <%= f.submit "Update" %>
 <% end %>
 </div>
+-->
 
