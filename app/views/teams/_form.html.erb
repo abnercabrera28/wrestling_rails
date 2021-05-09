@@ -1,0 +1,8 @@
+<div class="create">
+<%= form_with(model: model) do |f|%>
+    <h2 class="new"> <%= form_title %> </h2>
+    <%= f.text_field :name, placeholder: 'Name'%><br>
+    <%= f.text_area :description, placeholder: 'Describe Your Team'%><br>
+    <%= f.submit button_name %>
+<% end %>
+</div>
