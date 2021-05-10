@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   delete '/logout', to: "sessions#logout"
 
-  get '/most_recent', to: 'wrestlers#most_recent', as: 'recent'
+  get '/most_recent', to: 'wrestlers#most_recent'
 
   get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
 
