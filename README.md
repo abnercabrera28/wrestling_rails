@@ -1,6 +1,6 @@
 # Wrestlr
 
-Wrestlr is a Rails application that allows users to save information about their favorite wrestlers and teams on a local server. Developed using Ruby, Javascript, HTML and CSS.
+Wrestlr is a Rails application that allows users to save information about their favorite wrestlers and teams on a local server. Users can log in using their Google accounts by way of Omniauth. Developed using Ruby, Javascript, HTML and CSS.
 
 ## Usage
 
